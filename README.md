@@ -17,5 +17,6 @@
 | roll | yueyun | [#]() | 帮您在面对不同的选择的时候做出选择 |
 | openai | yueyun | # | 快来与openai聊天吧！(可自设定性格) （可添加上下文） |
 | weather-query | yueyun | # | 帮您实时查询天气(使用和风天气的api) |
-| pixiv-rank-search | yueyub | # | pixiv 搜索图片插件(含r18 谨慎使用) 注意如果出现问题，开发者不负任何责任 |
+| pixiv-rank-search | yueyun | # | pixiv 搜索图片插件(含r18 谨慎使用) 注意如果出现问题，开发者不负任何责任 |
+| search-anime | yueyun | # | 找资源找番看的插件捏 |
 
