@@ -1,0 +1,21 @@
+{
+  "name": "koishi-plugin-roll",
+  "description": "这是用来为您决定选择的插件捏",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.12.1"
+  }
+}
