@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-daily-sign",
   "description": "每日签到插件",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -19,5 +19,9 @@
   ],
   "peerDependencies": {
     "koishi": "^4.12.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "request": "^2.88.2"
   }
 }

@@ -8,18 +8,29 @@ class User {
     constructor(ctx: Context) {
         this.prisma = ctx.postgres.client
     }
-
     generateRandomNum = (mean: number, variance: number) => {
         let symbol = Math.random() > 0.5 ? 1 : -1
         let random_num = (3 / (Math.random() * mean)) * symbol + Math.random() * variance;
         return random_num
     }
-
-    getSignImage = async (random_num: string, checkin_time_last_str: string, impression: string) => {
+    getSignImage = async (random_num: string, checkin_time_last_str: string, impression: string, user: any, userInfo: any) => {
+        // 拼接查询字符串
+        let query = ''
+        console.log(userInfo);
+        for (let key in user) {
+            if (user[key] === null) {
+                user[key] = ''
+            }
+            query += `${key}=${user[key]}&`
+        }
         const browser = await chromium.launch({ headless: true })
         const context = await browser.newContext({ viewport: { width: 2000, height: 1600 } })
         const page = await context.newPage()
-        await page.goto(`http://127.0.0.1:7140/sign?random_num=${random_num}&checkin_time_last_str=${checkin_time_last_str}&impression=${impression}`)
+        let signURL = `http://127.0.0.1:5140/sign?random_num=${random_num}&checkin_time_last_str=${checkin_time_last_str}&impression=${impression}&${query}&user_avatar=${userInfo.avatar}&user_name=${userInfo.username}`
+        // console.log(signURL)
+        await page.goto(signURL)
+        // 等待图片加载
+        await page.waitForSelector('#avatar-ok')
         let img = await page.locator('.sign-card').screenshot()
         await browser.close()
         return new Promise((resolve, reject) => {
