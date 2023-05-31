@@ -1,0 +1,24 @@
+{
+  "name": "koishi-plugin-hdu-exam-query",
+  "description": "基于2023.5.26导出的期末考试时间安排查询",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.13.0"
+  },
+  "dependencies": {
+    "node-xlsx": "^0.23.0"
+  }
+}

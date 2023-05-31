@@ -20,4 +20,5 @@
 | weather-query | yueyun | [#]() | 帮您实时查询天气(使用和风天气的api) |
 | pixiv-rank-search | yueyun | [#]() | pixiv 搜索图片插件(含r18 谨慎使用) 注意如果出现问题，开发者不负任何责任 |
 | search-anime | yueyun | [#]() | 找资源找番看的插件捏 |
+| hdu-exam-query | Lycoiref | [#]() | 基于20230526导出的Excel编写的HDU考试查询插件 |
 
